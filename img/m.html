@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css shapees</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            height: 200px;
+            width: 400px;
+            margin: 190px auto;
+            background-color: red;
+            position: relative;
+
+            /* 
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid red;
+
+
+    border-left: 100px solid red;
+    border-right: 100px solid red ; */
+        }
+
+        .box::before {
+            content: '';
+            width: 0px;
+            height: 0px;
+
+            display: block;
+            margin: 0 auto;
+
+            position: absolute;
+            left: 0;
+            bottom: 100%;
+            /* border-top: 100px solid rgb(229, 10, 10); */
+            border-bottom: 100px solid red;
+
+
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent
+        }
+
+        .box::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+
+            position: absolute;
+            left: 0;
+            top: 100%;
+            border-top: 100px solid red;
+            /* border-bottom: 100px solid red; */
+
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+
+
+
+
+        }
+
+        .box2::after {
+
+            content: '';
+            display: block;
+            position: absolute;
+            top: 100%;
+            /* border-top: 100px solid transparent; */
+            border-bottom: 100px solid transparent;
+
+            border-left: 100px solid rgb(13, 211, 109);
+            border-right: 100px solid rgb(0, 255, 81);
+        }
+
+        .box2 {
+            position: relative;
+            margin: 100px auto;
+            width: 200px;
+            height: 250px;
+            background-color: blueviolet;
+            border-radius: 100px 100px 0 0;
+
+        }
+
+        .box2::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: cyan;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-20%, -50%);
+            border-radius: 50%;
+        }
+
+        .tooltip-top {
+            box-sizing: border-box;
+            /* Modify size here: */
+            --size: 500px;
+            --padding: 10px;
+
+            position: relative;
+            width: calc(var(--size) - var(--padding));
+            height: calc(var(--size) / 2);
+            background: #333;
+            padding: var(--padding);
+            overflow: scroll;
+            margin: 200px auto;
+            color: white;
+        }
+
+        .tooltip-top:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            background: #333;
+            height: 16px;
+            width: 16px;
+        }
+
+        .box3 {
+            width: 400px;
+            height: 400px;
+            background-image: url(img/team_img/3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 200px auto;
+            position: relative;
+        }
+
+        .box3::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+
+            /* border-top: 200px solid red; */
+            border-bottom: 200px solid transparent;
+
+            border-left: 200px solid white;
+            border-right: 200px solid white;
+
+        }
+
+        .box3::before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+
+            border-top: 200px solid transparent;
+            /* border-bottom: 200px solid transparent; */
+
+            border-left: 200px solid white;
+            border-right: 200px solid white;
+
+        }
+    </style>
+
+    <div class="box"></div>
+
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+    <div class="tooltip-top"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, animi sed totam blanditiis officiis est odit architecto sequi dolor dolorum eligendi, nulla maxime tempore sunt quisquam, aspernatur deleniti vitae asperiores! Nobis officiis consequuntur quidem? Quaerat, explicabo nobis. Modi tempore temporibus laboriosam maiores voluptatem, odit ipsa accusantium amet labore quaerat vitae vel natus rerum distinctio dolorum voluptatum nisi rem nemo, similique alias magni iure! Autem saepe doloribus, adipisci deleniti, totam facere maiores perferendis delectus praesentium corrupti consectetur fuga. At unde iste labore dolorem sit recusandae facere, in assumenda ut architecto quia perferendis! Qui eaque quidem eos, perspiciatis doloribus distinctio ullam quo dignissimos laboriosam soluta eveniet in debitis autem harum aperiam iste, enim accusantium velit aspernatur molestias omnis necessitatibus voluptate. Recusandae ut unde corporis praesentium? Alias, facilis molestias libero, obcaecati quo veritatis repudiandae illum porro eos enim fuga, distinctio maiores nemo possimus beatae? Expedita odio minima, earum nostrum numquam enim delectus magni molestias deleniti, ratione tenetur saepe distinctio nemo? Recusandae, debitis est? Suscipit ipsam ab harum non sint obcaecati dolorem, eius consectetur illum laudantium dignissimos minima tempore, voluptatum temporibus deserunt voluptatibus perferendis maiores velit, optio autem impedit. Esse, inventore quod laboriosam ducimus aspernatur repudiandae amet labore odit. Obcaecati voluptates quis mollitia blanditiis, ipsam, placeat accusantium minima ullam assumenda ducimus cum. Rem, reiciendis quaerat numquam, aliquid vero eos quia explicabo accusantium doloribus maxime consequuntur voluptate excepturi ratione illo debitis sapiente architecto quasi accusamus magni veritatis nam reprehenderit. Perspiciatis corporis eaque magnam dolores recusandae consectetur beatae tenetur esse ea. Non iusto quod, alias, quia excepturi laudantium minima quam praesentium unde et enim voluptatibus. Commodi recusandae aliquid illo facere quibusdam non quod et error tenetur modi, maxime nesciunt dolores id sit adipisci neque voluptate assumenda quidem temporibus in. Reiciendis sint voluptatem quidem fugit asperiores eius earum fuga maxime quas ducimus incidunt quos repellat repudiandae facilis temporibus commodi, iure dignissimos officiis itaque sit aliquam quod voluptatibus. Perferendis tempora maxime eveniet ab ratione debitis saepe eos aspernatur sunt, sed natus iusto quisquam fugiat quaerat et neque enim minima incidunt velit? Cupiditate culpa optio ipsum, assumenda quis perspiciatis illum recusandae eaque voluptas labore odio pariatur earum qui eum rem dignissimos? Nostrum officia accusantium, asperiores dicta nisi quisquam esse voluptatem veniam, mollitia voluptatum, reprehenderit eum tempora ut dolore aspernatur molestiae nesciunt odio nobis quo aliquam? Suscipit et corrupti unde eveniet sequi. Alias, laboriosam ducimus autem minima eaque atque nam totam delectus dolor dolorum laudantium nobis possimus, adipisci enim! Accusamus a adipisci, porro temporibus veniam quos eius facere quis quisquam nemo, obcaecati debitis doloremque accusantium iure reiciendis quod minima harum eos quae in fuga. Optio harum, laudantium qui possimus veniam odit vitae minima commodi illo ad, expedita nihil est molestiae placeat autem deleniti. Laboriosam necessitatibus voluptates nihil nemo dolorem odio veritatis quod est ipsam illo, officia aut harum temporibus nesciunt, repellat aliquam odit molestias quos et cupiditate nulla facere nobis? Repellendus eius neque, id, nesciunt quas qui repellat, ducimus sit dicta aliquam tempora. Ab nulla minima laboriosam repudiandae consequatur tenetur earum debitis ex illo, ad, odit similique est quo ea ratione cumque. Vero odio consequatur excepturi saepe eaque repellat earum sunt magnam aperiam! Qui harum eum voluptatem sequi? Quasi culpa odit facere nemo dolorem eaque eius cum corrupti sit, nam a animi inventore voluptatibus provident illum ex eos consectetur quaerat iusto libero ab in fuga commodi. Quis, tenetur qui fugit dignissimos quia impedit distinctio necessitatibus consequatur in iste explicabo quos vel iusto a eaque quasi voluptatem nostrum corporis. Deserunt vel voluptate qui nisi? Inventore atque laborum vitae? Expedita, veniam! Sit eaque eligendi adipisci? Nihil quia ullam aliquam consectetur culpa nemo accusantium! Ducimus dolorum molestiae quos natus esse reprehenderit, voluptatibus fugit eius laboriosam beatae libero ratione atque nulla ad perspiciatis, reiciendis illo repellendus, aspernatur non ea provident doloremque praesentium facilis corrupti. Officia ea ullam a nisi quo, minus adipisci dolores libero non, voluptatem nemo aliquid! Distinctio eum at ad iusto. Possimus quia laboriosam voluptate ducimus aut architecto, debitis ut ipsa incidunt sapiente sunt exercitationem labore necessitatibus fugiat! Maxime ratione quo assumenda! Repellat dicta doloremque, adipisci quidem officia, voluptate magni eius optio corporis quasi expedita nam accusantium nemo itaque excepturi rem sunt! Dolorum temporibus libero et officia deleniti, neque qui impedit amet nemo accusamus voluptatem vero quidem aut id odit earum numquam ab consequuntur a velit dignissimos reiciendis porro. Ratione minus eos odio incidunt dolorum voluptatibus distinctio labore aliquid, magni impedit, aperiam iste accusantium voluptatum optio atque. Mollitia est dolorum magnam sapiente corrupti distinctio aut excepturi, odit enim eligendi, eaque perferendis ipsam. Culpa odio reprehenderit eos necessitatibus. Ducimus temporibus quis nesciunt quae ipsam porro, excepturi iste officiis optio non vero nobis laudantium tempore animi nostrum ratione magnam earum possimus. Asperiores aliquam accusamus magni rem expedita sed ex id blanditiis magnam non, illo atque sunt ea velit repudiandae necessitatibus inventore ipsa enim culpa dolore consequatur. Quas dignissimos quod necessitatibus placeat numquam eius aspernatur pariatur praesentium optio dolor doloribus ab ratione molestiae possimus architecto at, ullam nesciunt qui accusamus excepturi modi molestias incidunt in? Iusto consequuntur facilis qui in ipsum, ipsam repudiandae non quas numquam perspiciatis natus quibusdam, aliquam nemo assumenda eligendi? Quia modi consequuntur reiciendis, velit omnis rerum, dolore quod adipisci eveniet sit, impedit deleniti quae totam perferendis animi voluptas esse sapiente eum nisi non autem architecto. Voluptatem incidunt voluptas porro atque officiis ipsa dolorem iusto, impedit suscipit, voluptates nesciunt ea fugit mollitia cupiditate eos recusandae totam rerum autem possimus quidem.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
